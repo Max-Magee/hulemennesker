@@ -66,6 +66,9 @@
   --color-info-bg: #ffffff;
   --color-infobox-1-bg: #cfcec6;
   --color-infobox-2-bg: #969995;
+
+  /*Form*/
+  --form-background-color: #969995;
 }
 
 #tech:hover polygon {
