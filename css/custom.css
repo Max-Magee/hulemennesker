@@ -47,10 +47,10 @@
 
   /* Fonts */
   --font-family-sans: ui-sans-serif;
-  /* --font-weight-light: 300;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700; */
+  --font-weight-bold: 700;
 
   /* Text sizes */
   --logotype-size: 1rem;
@@ -68,7 +68,7 @@
   --color-infobox-2-bg: #969995;
 
   /*Form*/
-  --form-background-color: #969995;
+  --form-background-color: #ffffff;
 }
 
 #tech:hover polygon {

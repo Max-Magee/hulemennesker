@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -19,7 +19,7 @@
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"><img src="img/logo1.svg" alt="logo" /></a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -35,65 +35,99 @@
 
     <main>
       <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform">
-          <label for="first">Navn</label>
-          <input id="first" type="text" name="first" />
-          <p>Please enter a value</p>
+      <section>
+        <form id="webform" aria-label="EK signup form">
+          <h2>TILMELD DIG</h2>
+          <div class="form2">
+            <div class="form-group">
+              <label for="first_name">Brugernavn</label>
+              <input type="text" id="first_name" name="first_name" aria-describedby="fname-error" required />
+              <p class="error-message" id="fname-error">Please enter a value</p>
+            </div>
 
-          <label for="age">Alder</label>
-          <input id="age" type="number" name="age" />
-          <p>Please enter a value</p>
+            <div class="form-group">
+              <label for="age">Alder</label>
 
-          <label for="email">Forældres Email</label>
-          <input id="email" type="email" name="email" />
-          <p>Please enter a value</p>
+              <select type="age" name="age" id="age" aria-describedby="age-error" required>
+                <optgroup label="Vælg Alder">
+                  <option value="under 13" disabled>under 13</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15" selected>15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="over 18" disabled>over 18</option>
+                </optgroup>
+                <p class="error-message" id="age-error">Du skal være mellem 13-18</p>
+              </select>
+            </div>
+          </div>
+          <div class="form2">
+            <div class="form-group">
+              <label for="email">Forældres E-mail</label>
+              <input type="email" id="email" name="email" aria-describedby="email-error" required />
+              <p class="error-message" id="email-error">Please enter a value</p>
+            </div>
 
-          <label for="pass">Password</label>
-          <input id="pass" type="password" name="password" />
-          <p>Please enter a value</p>
+            <div class="form-group">
+              <label for="password">Password</label>
 
-          <fieldset>
-            <legend>
-              <h3>Vælg foretrukket område</h3>
-            </legend>
-            <label for="indu">
-              <input type="radio" id="indu" name="field" value="industri" />
-              Industri
+              <input type="password" id="password" name="password" aria-describedby="password-instruction password-error" required />
+              <p class="error-message" id="password-error">Please enter a value</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>Foretrukket område</legend>
+              <div>
+                <label for="ind">
+                  <input type="checkbox" value="Industri" name="language" id="ind" aria-describedby="lang-msg" />
+                  Industri
+                </label>
+                <label for="kult">
+                  <input type="checkbox" value="Kultur" name="language" id="kult" aria-describedby="lang-msg" />
+                  Kultur
+                </label>
+                <label for="tekno">
+                  <input type="checkbox" value="Teknologi" name="language" id="tekno" aria-describedby="lang-msg" />
+                  Teknologi
+                </label>
+              </div>
+            </fieldset>
+            <p id="lang-msg" class="error-message">Vælg et område</p>
+          </div>
+          <div class="kommentar">
+            <textarea id="kommentar" name="kommentar" placeholder="Skriv noget om dig selv, hvorfor du vil være med, eller noget helt tredje"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="accept_terms">
+              <input type="checkbox" id="accept_terms" name="accept_terms" value="yes" aria-describedby="terms-error" required />
+              Accept terms
             </label>
+            <p class="error-message" id="terms-error">Skal bekræftes</p>
+          </div>
 
-            <label for="kult">
-              <input type="radio" id="kult" name="field" value="kultur" />
-              Kultur
-            </label>
-
-            <label for="tekno">
-              <input type="radio" id="tekno" name="field" value="teknologi" />
-              Teknologi
-            </label>
-          </fieldset>
-          <label for="kommentar">Tilføj kommentar</label>
-          <input id="kommentar" type="text" name="kommentar" />
-          <p>Skriv noget om dig selv, hvorfor du gerne vil hjælpe, eller noget helt tredje!</p>
-          <label for="terms">
-            <input id="terms" type="checkbox" />
-            Accept terms
-          </label>
-
-          <button>Sign up</button>
+          <button>Tilmeld</button>
         </form>
       </section>
+      <section class="output">
+        <h2>Opsamling</h2>
 
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
+        <div>
+          <p><span id="first_name_output"></span></p>
+          <p><span id="last_name_output"></span></p>
+          <p><span id="email_output"></span></p>
+          <p><span id="password_output"></span></p>
+          <p><span id="lang_output"></span></p>
+          <p><span id="kommentar_output"></span></p>
+          <p><span id="terms_output"></span></p>
+        </div>
       </section>
+
+      <script src="/js/mainly.js"></script>
     </main>
     <footer>
       <nav class="some">
