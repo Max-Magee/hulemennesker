@@ -1,7 +1,7 @@
 #head-txt {
   fill: rgb(54, 54, 54);
 }
-.info-graphic,
+/*.info-graphic,*/
 .info-text {
   background-color: var(--color-info-bg);
   padding: 20px 0;
@@ -9,6 +9,10 @@
 .info-graphic {
   border-radius: 0;
   margin: 60px auto 80px auto;
+}
+.info-graphic svg {
+  max-width: 500px;
+  justify-self: center;
 }
 .info-text h2 {
   line-height: 3rem;

@@ -55,7 +55,7 @@ textarea {
 
 button {
   font-family: "Rubik";
-  border: 1px;
+  border: none;
   background-color: var(--color-head-bg);
   color: #fff;
   border-radius: 6px;
