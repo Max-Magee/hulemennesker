@@ -2,6 +2,11 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
 }
 
 header {
@@ -17,6 +22,11 @@ header {
   padding-left: 2rem;
   padding-bottom: 2%;
   margin-bottom: var(--margin-head-bottom);
+}
+#main-disclamer svg {
+  height: 150px;
+  width: auto;
+  margin-right: 1rem;
 }
 
 #main-disclamer-content {
@@ -35,7 +45,7 @@ h1 {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-inverted);
   margin: 5px 0;
-  line-height: 1.3rem;
+  line-height: 2rem;
   text-align: left;
 }
 

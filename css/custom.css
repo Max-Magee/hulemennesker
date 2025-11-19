@@ -1,9 +1,9 @@
 :root {
   /* Colours */
-  --color-bg: #fceb94; /* page background */
+  --color-bg: light-dark(#fceb94, #1b1b1b);
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: light-dark(#ff4b00, #6f90eb);
 
   /* Logotype */
   --color-logotype-bg: #000000;
@@ -19,7 +19,7 @@
   --border-radius-links: 1px;
 
   /* Headlines og rubrik */
-  --font-h1-size: 1rem;
+  --font-h1-size: 2rem;
   --font-sub1-size: 1rem;
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
@@ -92,4 +92,102 @@
 .info2,
 .info3 {
   display: none;
+}
+
+[popover] {
+  position: absolute;
+  justify-self: center;
+  width: 400px;
+  padding: 20px;
+
+  top: 50%;
+  opacity: 0;
+  scale: 1.1;
+  transition: 400ms;
+  transition-behavior: allow-discrete;
+}
+[popover] h2 {
+  font-size: x-large;
+}
+[popover] h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+  scale: none;
+  transition: opacity 800ms ease,
+    scale 1500ms 400ms
+      linear(
+        0,
+        0.013 0.5%,
+        0.05 1%,
+        0.109 1.5%,
+        0.204 2.1%,
+        0.429 3.2%,
+        1.04 5.8%,
+        1.301 7.2%,
+        1.395 7.9%,
+        1.454 8.5%,
+        1.491 9.1%,
+        1.508 9.7%,
+        1.506 10.2%,
+        1.488 10.8%,
+        1.453 11.4%,
+        1.405 12%,
+        1.29 13.1%,
+        0.98 15.7%,
+        0.847 17.1%,
+        0.799 17.8%,
+        0.769 18.4%,
+        0.75 19%,
+        0.742 19.6%,
+        0.752 20.7%,
+        0.794 21.9%,
+        1.01 25.6%,
+        1.078 27%,
+        1.118 28.3%,
+        1.131 29.5%,
+        1.126 30.6%,
+        1.105 31.8%,
+        0.995 35.5%,
+        0.96 36.9%,
+        0.941 38.1%,
+        0.933 39.3%,
+        0.942 41.3%,
+        1.016 46.4%,
+        1.034 49.2%,
+        1.029 51.2%,
+        0.992 56.3%,
+        0.983 59%,
+        1.009 68.9%,
+        0.996 78.5%,
+        1.002 88.5%,
+        1
+      );
+}
+
+@starting-style {
+  [popover]:popover-open {
+    scale: 0.9;
+    opacity: 0;
+  }
+}
+
+/* Backdrop */
+::backdrop {
+  opacity: 0;
+  transition: 400ms allow-discrete;
+  background: #0008;
+}
+
+:popover-open::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  :popover-open::backdrop {
+    opacity: 0;
+  }
 }
