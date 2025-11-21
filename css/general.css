@@ -75,6 +75,9 @@ h2 {
   font-family: "Rubik";
   font-size: var(--headline2-size);
 }
+#daily h2 {
+  color: var(--color-headline-text-page);
+}
 
 h3 {
   font-family: "Rubik";

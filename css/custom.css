@@ -6,14 +6,14 @@
   --color-head-bg: light-dark(#ff4b00, #6f90eb);
 
   /* Logotype */
-  --color-logotype-bg: #000000;
+  --color-logotype-bg: light-dark(#6f90eb, #bf6640);
   --color-text-logotype: #fffae2;
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: #6f90eb;
+  --color-menu-bg: light-dark(#6f90eb, #bf6640);
   /* Links */
-  --color-link-bg: #fffae2;
+  --color-link-bg: light-dark(#fffae2, #494949);
   --color-link-hover: #fff; /* used */
   --color-link-active: #99958f; /* used */
   --border-radius-links: 1px;
@@ -27,8 +27,8 @@
   --color-headline-text-page: #fffae2;
 
   /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #ffffff;
+  --color-text: light-dark(#000, #ffffff);
+  --color-text-inverted: light-dark(#ffffff, #000000);
 
   /*  Marginer */
   --margin-head-bottom: 5px;
@@ -37,13 +37,13 @@
   --border-radius: 5px;
 
   /* Cards */
-  --color-card-bg: #ffffff;
-  --color-cta-card-bg: #ff4b00;
+  --color-card-bg: light-dark(#ffffff, #bf6640);
+  --color-cta-card-bg: light-dark(#ff4b00, #6f90eb);
   /* news-cards */
-  --color-news-bg: #fffae2;
-  --color-news-bg-inverted: #dbe2f5;
-  --color-cta-newscard-bg: #ffa680;
-  --color-cta-newscard-bg-inverted: #6f90eb;
+  --color-news-bg: light-dark(#fffae2, #494949);
+  --color-news-bg-inverted: light-dark(#dbe2f5, #494949);
+  --color-cta-newscard-bg: light-dark(#ffa680, #6f90eb);
+  --color-cta-newscard-bg-inverted: light-dark(#6f90eb, #ffa680);
 
   /* Fonts */
   --font-family-sans: ui-sans-serif;
@@ -63,12 +63,12 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #ffffff;
+  --color-info-bg: light-dark(#ffffff, #6f90eb);
   --color-infobox-1-bg: #cfcec6;
   --color-infobox-2-bg: #969995;
 
   /*Form*/
-  --form-background-color: #ffffff;
+  --form-background-color: light-dark(#ffffff, #6f90eb);
 }
 
 #tech:hover polygon {
